@@ -1,0 +1,17 @@
+services:
+- type: web
+  name: n8n
+  env: docker
+  plan: free
+  dockerfilePath: Dockerfile
+  envVars:
+  - key: N8N_BASIC_AUTH_ACTIVE
+    value: "true"
+  - key: N8N_BASIC_AUTH_USER
+    value: "ron"
+  - key: N8N_BASIC_AUTH_PASSWORD
+    value: "a2t3i4a5"
+  - key: N8N_HOST
+    value: "0.0.0.0"
+  - key: WEBHOOK_TUNNEL_URL
+    value: "https://n8n-ron.onrender.com"
